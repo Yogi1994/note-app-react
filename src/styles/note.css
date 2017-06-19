@@ -1,0 +1,19 @@
+.noteOuterContainer{
+	background: #dedede;
+	border: 1px solid #acacff;
+	height: 200px;
+	width: 200px;
+}
+
+.mainFolderImage {
+  background: #aaaaaa;
+  margin:10px;
+}
+
+.inRow {
+	float: left;
+}
+
+.folderLabel {
+	margin: 10px;
+}
