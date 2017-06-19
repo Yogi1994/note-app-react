@@ -46,9 +46,10 @@ class Note extends Component {
   renderNonEditableHeader() {
     return (
       <div>
-        <span>{this.props.data.title}</span>
+        <span><b>{this.props.data.title}</b></span>
         <button onClick={this.onEditNote.bind(this)}>Edit</button>
         <button>Color</button>
+        <button onClick={this.props.onDelete}>Delete</button>
       </div>
     );
   }

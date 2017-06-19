@@ -14,7 +14,7 @@ class AllNotes extends Component {
 	}
 
 	onDelete(noteId: string){
-		this.props.onDelete(noteId);
+		this.props.deleteNote(noteId);
 	}
 
 	addNewNote() {
@@ -32,7 +32,7 @@ class AllNotes extends Component {
 					key={key}
 					data={this.props.noteList[key]} 
 					onEditSubmit={(title, contentBody, color) => {this.onEditSubmit(key, title, contentBody, color)}}
-					onDelete={this.onDelete.bind(this)}/>
+					onDelete={this.onDelete.bind(this, key)}/>
 			);
 			noteComponentsList.push(noteComponent);
 		}

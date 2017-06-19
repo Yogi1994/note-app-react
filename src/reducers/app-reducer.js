@@ -29,7 +29,7 @@ export const appReducer = (state = initialState, action) => {
           color: action.data.color,
           contentBody: action.data.contentBody
         };
-        return Object.assign({}, state, {noteList: noteList})
+        return Object.assign({}, state, {noteList: noteList});
       }
     case ActionNames.EDIT_NOTE:
       {
@@ -40,11 +40,15 @@ export const appReducer = (state = initialState, action) => {
           color: action.data.color,
           contentBody: action.data.contentBody
         };
-        return Object.assign({}, state, {noteList: noteList})
+        return Object.assign({}, state, {noteList: noteList});
       }
     case ActionNames.DELETE_NOTE:
       {
+        var noteList = Object.assign({}, state.noteList);
 
+        noteList[action.noteId] = undefined;
+        delete noteList[action.noteId];
+        return Object.assign({}, state, {noteList: noteList});
       }
     default:
       return state;

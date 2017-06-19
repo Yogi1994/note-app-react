@@ -24,6 +24,7 @@ export function addNewNote (title:string, contentBody: string, color: string) {
 }
 
 export function deleteNote (noteId: string) {
+  console.log(noteId);
   return {
     type: ActionNames.DELETE_NOTE,
     noteId: noteId
