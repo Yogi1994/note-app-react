@@ -29,6 +29,7 @@ class AllNotes extends Component {
 		for (var key in this.props.noteList){
 			let noteComponent = (
 				<WiNote 
+					key={key}
 					data={this.props.noteList[key]} 
 					onEditSubmit={(title, contentBody, color) => {this.onEditSubmit(key, title, contentBody, color)}}
 					onDelete={this.onDelete.bind(this)}/>

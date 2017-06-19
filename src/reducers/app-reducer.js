@@ -40,10 +40,11 @@ export const appReducer = (state = initialState, action) => {
           color: action.data.color,
           contentBody: action.data.contentBody
         };
+        return Object.assign({}, state, {noteList: noteList})
       }
     case ActionNames.DELETE_NOTE:
       {
-        
+
       }
     default:
       return state;

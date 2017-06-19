@@ -22,8 +22,8 @@ class Note extends Component {
     this.setState({
       editMode: true,
       title: this.props.data.title,
-      contentBody: this.props.data.contantBody,
-      color: this.props.data.colors
+      contentBody: this.props.data.contentBody,
+      color: this.props.data.color
     });
   }
 
